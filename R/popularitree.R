@@ -53,6 +53,6 @@ generate_sample <- function(taxon_scores, ntax, phy, pd_weighting, min.prob=0.01
 #' @export
 species_gtrends_popularity <- function(species, standard="Myrmeocystus mexicanus") {
   result <- gtrendsR::gtrends(c(species, standard), time="2017-01-01 2017-12-31")$interest_over_time
-  result <- subset(result, keyword==species)
+  result <- subset(result, result$keyword==species)
   return(sum(result$hits))
 }
