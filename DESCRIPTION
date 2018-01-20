@@ -1,0 +1,9 @@
+Package: popularitree
+Title: Subsamples a tree to get popular taxa
+Version: 0.0.0.9000
+Authors@R: person("Brian", "O'Meara", email = "omeara.brian@gmail.com", role = c("aut", "cre"))
+Description: Often you want to show a reduced summary tree. Taxa chosen should span all the tree (for example, a tree of mammals should not have just primates) but also be recognizable groups to your audience. This lets you select a final tree size you want, criteria you want to use, and finds the tree that maximizes the criteria.
+Depends: R (>= 3.4.3)
+License: GPL ≥2.0
+Encoding: UTF-8
+LazyData: true
