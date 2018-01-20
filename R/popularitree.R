@@ -56,3 +56,16 @@ species_gtrends_popularity <- function(species, standard="Myrmeocystus mexicanus
   result <- subset(result, result$keyword==species)
   return(sum(result$hits))
 }
+
+#' Return 1 if a species has a common name in NCBI, 0 otherwise
+#' @param species The focal species to examine
+#' @return 1 or 0
+#' @examples
+#' species_ncbi_common_exists('Puma concolor')
+#' species_ncbi_common_exists('Pomatomus saltatrix')
+#'
+#' @export
+species_ncbi_common_exists <- function(species) {
+  returned.name <- taxize::sci2comm(scinames=species, db='ncbi')[[1]]
+  return(length(nchar(returned.name[[1]])))
+}

@@ -3,3 +3,4 @@
 export(generate_sample)
 export(popularitree)
 export(species_gtrends_popularity)
+export(species_ncbi_common_exists)
