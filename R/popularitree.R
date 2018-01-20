@@ -2,7 +2,8 @@
 popularitree <- function(phy, ntax, measures, formula, weighting=1) {
   taxon.metrics <- with(measures, formula)
   names(taxon.metrics) <- rownames(measures)
-  #an optimization occurs: generate a set of taxa and get the score for the included set, sample the tree to get the phylogenetic diversity, combine the scores using the weighting, repeat, repeat, repeat.
+  starting.population <- unique(replicate(100, generate.sample(taxon.metrics, ntax)))
+  #an optimization occurs: generate a set of taxa and get the score for the included set (starting.population above), sample the tree to get the phylogenetic diversity, combine the scores using the weighting, repeat, repeat, repeat. Can generate many using generate.sample and then
   return(phy.best)
 }
 
