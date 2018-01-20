@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Get a sum of hits of a species relative to a standard — species_gtrends_popularity • popularitree</title>
+<title>Return common name if known, otherwise return scientific name — species_get_common • popularitree</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -75,36 +75,27 @@
       <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Get a sum of hits of a species relative to a standard</h1>
+    <h1>Return common name if known, otherwise return scientific name</h1>
     </div>
 
     
-    <p>Get a sum of hits of a species relative to a standard</p>
+    <p>Return common name if known, otherwise return scientific name</p>
     
 
-    <pre class="usage"><span class='fu'>species_gtrends_popularity</span>(<span class='no'>species</span>, <span class='kw'>standard</span> <span class='kw'>=</span> <span class='st'>"Myrmeocystus mexicanus"</span>,
-  <span class='kw'>verbose</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</pre>
+    <pre class="usage"><span class='fu'>species_get_common</span>(<span class='no'>species</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>species</th>
-      <td><p>The focal species to look at search interest over</p></td>
-    </tr>
-    <tr>
-      <th>standard</th>
-      <td><p>Since Google Trends always compares popularity, give a standard species to use</p></td>
-    </tr>
-    <tr>
-      <th>verbose</th>
-      <td><p>If TRUE, chat about what species is being examined</p></td>
+      <td><p>Species name</p></td>
     </tr>
     </table>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>The sum of relative hits over the time period</p>
+    <p>Common name (ideally) or species name</p>
     
 
   </div>

@@ -10,7 +10,7 @@
 #' @return A phylo object pruned to the number of taxa
 #' @examples
 #' big.phy <- rotl::get_study("ot_308")[[1]]
-#' big.phy <- geiger::drop.random(big.phy, ape::Ntip(phy) - 20)
+#' big.phy <- geiger::drop.random(big.phy, ape::Ntip(big.phy) - 20)
 #' measures <- tree_compute_measures(big.phy)
 #' small.phy <- popularitree(phy=big.phy, ntax=5, measures, nrep=100)
 #' par(mfcol=c(1,3))

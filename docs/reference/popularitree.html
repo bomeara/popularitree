@@ -115,6 +115,58 @@ and then sum to combine the columns into a single measure.</p>
     <p>A phylo object pruned to the number of taxa</p>
     
 
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='no'>big.phy</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>rotl</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/rotl/topics/get_study'>get_study</a></span>(<span class='st'>"ot_308"</span>)<span class='kw'>[[</span><span class='fl'>1</span>]]
+<span class='no'>big.phy</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>geiger</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/geiger/topics/drop.extinct'>drop.random</a></span>(<span class='no'>big.phy</span>, <span class='kw pkg'>ape</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/ape/topics/summary.phylo'>Ntip</a></span>(<span class='no'>big.phy</span>) - <span class='fl'>20</span>)
+<span class='no'>measures</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='tree_compute_measures.html'>tree_compute_measures</a></span>(<span class='no'>big.phy</span>)</div><div class='output co'>#&gt; <span class='message'></span>
+#&gt; <span class='message'>Retrieving data for taxon 'Microtus_juldaschi'</span></div><div class='output co'>#&gt; <span class='message'></span>
+#&gt; <span class='message'>Retrieving data for taxon 'Gerbillurus_setzeri'</span></div><div class='output co'>#&gt; <span class='message'></span>
+#&gt; <span class='message'>Retrieving data for taxon 'Cricetomys_gambianus'</span></div><div class='output co'>#&gt; <span class='message'></span>
+#&gt; <span class='message'>Retrieving data for taxon 'Spalax_giganteus'</span></div><div class='output co'>#&gt; <span class='message'>Not found. Consider checking the spelling or alternate classification</span></div><div class='output co'>#&gt; <span class='message'></span>
+#&gt; <span class='message'>Retrieving data for taxon 'Zygodontomys_brevicauda'</span></div><div class='output co'>#&gt; <span class='message'></span>
+#&gt; <span class='message'>Retrieving data for taxon 'Akodon_dayi'</span></div><div class='output co'>#&gt; <span class='message'></span>
+#&gt; <span class='message'>Retrieving data for taxon 'Oecomys_rex'</span></div><div class='output co'>#&gt; <span class='message'></span>
+#&gt; <span class='message'>Retrieving data for taxon 'Chiropodomys_major'</span></div><div class='output co'>#&gt; <span class='message'>Not found. Consider checking the spelling or alternate classification</span></div><div class='output co'>#&gt; <span class='message'></span>
+#&gt; <span class='message'>Retrieving data for taxon 'Nesokia_bunnii'</span></div><div class='output co'>#&gt; <span class='message'>Not found. Consider checking the spelling or alternate classification</span></div><div class='output co'>#&gt; <span class='message'></span>
+#&gt; <span class='message'>Retrieving data for taxon 'Nesokia_indica'</span></div><div class='output co'>#&gt; <span class='message'></span>
+#&gt; <span class='message'>Retrieving data for taxon 'Ctenomys_perrensis'</span></div><div class='output co'>#&gt; <span class='message'></span>
+#&gt; <span class='message'>Retrieving data for taxon 'Petinomys_genibarbis'</span></div><div class='output co'>#&gt; <span class='message'>Not found. Consider checking the spelling or alternate classification</span></div><div class='output co'>#&gt; <span class='message'></span>
+#&gt; <span class='message'>Retrieving data for taxon 'Exilisciurus_concinnus'</span></div><div class='output co'>#&gt; <span class='message'></span>
+#&gt; <span class='message'>Retrieving data for taxon 'Lepilemur_mustelinus'</span></div><div class='output co'>#&gt; <span class='message'></span>
+#&gt; <span class='message'>Retrieving data for taxon 'Tragelaphus_eurycerus'</span></div><div class='output co'>#&gt; <span class='message'></span>
+#&gt; <span class='message'>Retrieving data for taxon 'Viverricula_indica'</span></div><div class='output co'>#&gt; <span class='message'></span>
+#&gt; <span class='message'>Retrieving data for taxon 'Manis_crassicaudata'</span></div><div class='output co'>#&gt; <span class='message'></span>
+#&gt; <span class='message'>Retrieving data for taxon 'Mormoops_blainvillii'</span></div><div class='output co'>#&gt; <span class='message'></span>
+#&gt; <span class='message'>Retrieving data for taxon 'Chalinolobus_dwyeri'</span></div><div class='output co'>#&gt; <span class='message'>Not found. Consider checking the spelling or alternate classification</span></div><div class='output co'>#&gt; <span class='message'></span>
+#&gt; <span class='message'>Retrieving data for taxon 'Crocidura_beatus'</span></div><div class='output co'>#&gt; [1] "Retrieving trends data for taxon 'Microtus_juldaschi'"
+#&gt; [1] "Retrieving trends data for taxon 'Gerbillurus_setzeri'"
+#&gt; [1] "Retrieving trends data for taxon 'Cricetomys_gambianus'"
+#&gt; [1] "Retrieving trends data for taxon 'Spalax_giganteus'"
+#&gt; [1] "Retrieving trends data for taxon 'Zygodontomys_brevicauda'"
+#&gt; [1] "Retrieving trends data for taxon 'Akodon_dayi'"
+#&gt; [1] "Retrieving trends data for taxon 'Oecomys_rex'"
+#&gt; [1] "Retrieving trends data for taxon 'Chiropodomys_major'"
+#&gt; [1] "Retrieving trends data for taxon 'Nesokia_bunnii'"
+#&gt; [1] "Retrieving trends data for taxon 'Nesokia_indica'"
+#&gt; [1] "Retrieving trends data for taxon 'Ctenomys_perrensis'"
+#&gt; [1] "Retrieving trends data for taxon 'Petinomys_genibarbis'"
+#&gt; [1] "Retrieving trends data for taxon 'Exilisciurus_concinnus'"
+#&gt; [1] "Retrieving trends data for taxon 'Lepilemur_mustelinus'"
+#&gt; [1] "Retrieving trends data for taxon 'Tragelaphus_eurycerus'"
+#&gt; [1] "Retrieving trends data for taxon 'Viverricula_indica'"
+#&gt; [1] "Retrieving trends data for taxon 'Manis_crassicaudata'"
+#&gt; [1] "Retrieving trends data for taxon 'Mormoops_blainvillii'"
+#&gt; [1] "Retrieving trends data for taxon 'Chalinolobus_dwyeri'"
+#&gt; [1] "Retrieving trends data for taxon 'Crocidura_beatus'"</div><div class='input'><span class='no'>small.phy</span> <span class='kw'>&lt;-</span> <span class='fu'>popularitree</span>(<span class='kw'>phy</span><span class='kw'>=</span><span class='no'>big.phy</span>, <span class='kw'>ntax</span><span class='kw'>=</span><span class='fl'>5</span>, <span class='no'>measures</span>, <span class='kw'>nrep</span><span class='kw'>=</span><span class='fl'>100</span>)
+<span class='fu'>par</span>(<span class='kw'>mfcol</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='fl'>1</span>,<span class='fl'>3</span>))
+<span class='fu'>plot</span>(<span class='no'>big.phy</span>)
+<span class='fu'>plot</span>(<span class='no'>small.phy</span>)
+<span class='fu'>plot</span>(<span class='fu'><a href='tree_convert_to_common.html'>tree_convert_to_common</a></span>(<span class='no'>small.phy</span>))</div><div class='output co'>#&gt; <span class='message'></span>
+#&gt; <span class='message'>Retrieving data for taxon 'Nesokia_indica'</span></div><div class='output co'>#&gt; <span class='message'></span>
+#&gt; <span class='message'>Retrieving data for taxon 'Lepilemur_mustelinus'</span></div><div class='output co'>#&gt; <span class='message'></span>
+#&gt; <span class='message'>Retrieving data for taxon 'Viverricula_indica'</span></div><div class='output co'>#&gt; <span class='message'></span>
+#&gt; <span class='message'>Retrieving data for taxon 'Mormoops_blainvillii'</span></div><div class='output co'>#&gt; <span class='message'></span>
+#&gt; <span class='message'>Retrieving data for taxon 'Crocidura_beatus'</span></div><div class='img'><img src='popularitree-1.png' alt='' width='700' height='432.632880098887' /></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -122,7 +174,9 @@ and then sum to combine the columns into a single measure.</p>
       <li><a href="#arguments">Arguments</a></li>
       
       <li><a href="#value">Value</a></li>
-          </ul>
+      
+      <li><a href="#examples">Examples</a></li>
+    </ul>
 
   </div>
 </div>
