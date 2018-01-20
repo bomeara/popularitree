@@ -2,5 +2,8 @@
 
 export(generate_sample)
 export(popularitree)
+export(species_get_common)
 export(species_gtrends_popularity)
 export(species_ncbi_common_exists)
+export(tree_compute_measures)
+export(tree_convert_to_common)

@@ -4,12 +4,15 @@
 \alias{species_gtrends_popularity}
 \title{Get a sum of hits of a species relative to a standard}
 \usage{
-species_gtrends_popularity(species, standard = "Myrmeocystus mexicanus")
+species_gtrends_popularity(species, standard = "Myrmeocystus mexicanus",
+  verbose = TRUE)
 }
 \arguments{
 \item{species}{The focal species to look at search interest over}
 
 \item{standard}{Since Google Trends always compares popularity, give a standard species to use}
+
+\item{verbose}{If TRUE, chat about what species is being examined}
 }
 \value{
 The sum of relative hits over the time period

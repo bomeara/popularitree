@@ -24,3 +24,13 @@ A phylo object pruned to the number of taxa
 This assumes you will have a data.frame of popularity measures
 and then sum to combine the columns into a single measure.
 }
+\examples{
+big.phy <- rotl::get_study("ot_308")[[1]]
+big.phy <- geiger::drop.random(big.phy, ape::Ntip(phy) - 20)
+measures <- tree_compute_measures(big.phy)
+small.phy <- popularitree(phy=big.phy, ntax=5, measures, nrep=100)
+par(mfcol=c(1,3))
+plot(big.phy)
+plot(small.phy)
+plot(tree_convert_to_common(small.phy))
+}
